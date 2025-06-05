@@ -1,2 +1,30 @@
-# DoubleLinkedListWithIterator
-DoubleLinkedListWithIterator
+## DoubleLinkedListWithIterator
+
+C++ STL의 List를 구현한 예제입니다.
+DoubleLinkedList 클래스를 제공합니다.
+
+### 설명
+* 	brief Iterator를 지원하는 이중 연결 리스트 클래스입니다.
+*   details 이 클래스는 이중 연결 리스트를 구현하며, 노드를 순회할 수 있는 반복자(iterator)가 있습니다.
+*   templte param T 저장할 데이터의 타입을 지정합니다.
+* 	note 이 클래스는 C++ 표준 라이브러리의 std::list와 유사한 기능을 제공합니다.
+
+### 제공하는 메서드 
+* Insert() 메서드를 사용하여 특정 위치에 데이터를 삽입
+* push_back() 메서드를 사용하여 리스트의 끝에 데이터를 추가
+* push_front() 메서드를 사용하여 리스트의 시작에 데이터를 추가
+* pop_front() 메서드를 사용하여 리스트의 시작에서 데이터를 제거하고 반환
+* pop_back() 메서드를 사용하여 리스트의 끝에서 데이터를 제거하고 반환
+* find() 메서드를 사용하여 특정 데이터를 찾고 해당 노드를 반환
+* erase() 메서드를 사용하여 특정 노드를 제거
+* remove() 메서드를 사용하여 특정 데이터를 제거
+* clear() 메서드를 사용하여 리스트의 모든 데이터를 제거
+* size() 메서드를 사용하여 리스트의 크기를 반환
+* front() 메서드를 사용하여 리스트의 첫 번째 데이터를 반환
+* back() 메서드를 사용하여 리스트의 마지막 데이터를 반환
+* empty() 메서드를 사용하여 리스트가 비어있는지 확인
+
+### ⚙️ 빌드 환경
+
+* C++14 표준
+* Visual Studio 2022
