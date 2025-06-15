@@ -13,6 +13,30 @@ int main()
 		std::cout << item << std::endl;
 	}
 	testList.clear();
+	testList.merge(std::list<int>(5, 10));
+	testList.max_size();
+
+	std::list<int> tList(5, 5);
+	auto it = testList.begin();
+	it++;
+	testList.splice(it, tList);
+
+	std::cout << "===============================" << '\n';
+	for (const auto& item : testList)
+	{
+		std::cout << item << std::endl;
+	}
+	std::cout << "===============================" << '\n';
+	for (const auto& item : tList)
+	{
+		std::cout << item << std::endl;
+	}
+
+	constexpr auto _Unsigned_max = static_cast<std::make_unsigned_t<long long>>(-1);
+	std::cout << _Unsigned_max << '\n';
+
+	constexpr auto _Unsigned_max2 = static_cast<std::make_unsigned_t<int>>(-1);
+	std::cout << _Unsigned_max2 << '\n';
 
 	/*
 	* DoubleLinkedList를 사용한 예제
@@ -36,7 +60,7 @@ int main()
 	// 삭제 테스트
 	std::cout << "List의 원소중 30을 제거합니다. " << std::endl;
 	DoubleLinkedList<int>::Node* pFind = MyList.find(30);
-	MyList.erase(pFind);   
+	MyList.erase(pFind);
 
 	// 전체 목록을 출력
 	std::cout << "List의 원소를 모두 출력합니다. " << std::endl;
@@ -55,12 +79,14 @@ int main()
 	}
 
 	// 첫 번째 원소를 pop_front()로 제거
-	DoubleLinkedList<int>::Node* pFront = MyList.pop_front();
-	std::cout << "pop_front()로 제거한 첫 번째 원소는 : " << pFront->data << std::endl;
+	int iFront = MyList.front();
+	MyList.pop_front();
+	std::cout << "pop_front()로 제거한 첫 번째 원소는 : " << iFront << std::endl;
 
 	// 마지막 원소를 pop_back()로 제거
-	DoubleLinkedList<int>::Node* pBack = MyList.pop_back();
-	std::cout << "pop_back()로 제거한 마지막 원소는 : " << pBack->data << std::endl;
+	int iBack = MyList.back();
+	MyList.pop_back();
+	std::cout << "pop_back()로 제거한 마지막 원소는 : " << iBack << std::endl;
 
 	// 비어 있는지 확인
 	if (MyList.empty())
